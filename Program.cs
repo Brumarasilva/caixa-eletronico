@@ -55,10 +55,13 @@ switch (opção)
     Console.WriteLine($"O extrato é: {Extrato}");
     break;
     case "4":
-    Console.WriteLine("");
+   Console.WriteLine("Insira o valor que deseja transferir: ");
+   double transferencia = double.Parse(Console.ReadLine());
+   valor -= transferencia;
+    Console.WriteLine("valor na conta " + valor);
     break;
     case "5":
-    Console.WriteLine("");
+     Console.WriteLine("valor na conta " + valor);
     break;
 
 }
