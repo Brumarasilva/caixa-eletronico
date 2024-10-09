@@ -17,6 +17,7 @@ Console.WriteLine("2-Depósito");
 Console.WriteLine("3-Extrato");
 Console.WriteLine("4-Transferência");
 Console.WriteLine("5-Verificar saldo ");
+Console.WriteLine("6-sair ");
 string opção = Console.ReadLine();
 
 Console.WriteLine("Valor na conta " + valor);
@@ -25,44 +26,48 @@ switch (opção)
 {
     case "1":
     return1:
-    Console.WriteLine("Insira o valor que deseja sacar: ");
-    double valorsaque = double.Parse(Console.ReadLine());
-    if(valor >=valorsaque)
-    { 
-        valor -= valorsaque;
-        Console.WriteLine("Saque realizado com sucesso!");
-        Console.WriteLine("Valor na conta " + valor);
-        Extrato += $"-{valorsaque}\n";
-        goto return2;
-    }
-    else 
-    {   
-        Console.WriteLine("Saque inválido! Favor Tente outro valor. ");
-        goto return1;    
-    }
-    break;
+        Console.WriteLine("Insira o valor que deseja sacar: ");
+        double valorsaque = double.Parse(Console.ReadLine());
+        if (valor >= valorsaque)
+        {
+            valor -= valorsaque;
+            Console.WriteLine("Saque realizado com sucesso!");
+            Console.WriteLine("Valor na conta " + valor);
+            Extrato += $"-{valorsaque}\n";
+            goto return2;
+        }
+        else
+        {
+            Console.WriteLine("Saque inválido! Favor Tente outro valor. ");
+            goto return1;
+        }
+        break;
     case "2":
-    Console.WriteLine("Insira o valor que deseja depósitar: ");
-    double valordeposito = double.Parse(Console.ReadLine());
-    valor += valordeposito;
-    Console.WriteLine("Depósito realizado com sucesso!");
-    Extrato += $"+{valordeposito}\n";
-    Console.WriteLine("valor na conta " + valor);
-    goto return3;
-    
-    break;
+        Console.WriteLine("Insira o valor que deseja depósitar: ");
+        double valordeposito = double.Parse(Console.ReadLine());
+        valor += valordeposito;
+        Console.WriteLine("Depósito realizado com sucesso!");
+        Extrato += $"+{valordeposito}\n";
+        Console.WriteLine("valor na conta " + valor);
+        goto return3;
+        break;
     case "3":
-    Console.WriteLine($"O extrato é: {Extrato}");
-    break;
+        Console.WriteLine($"O extrato é: {Extrato}");
+        goto return2;
     case "4":
-   Console.WriteLine("Insira o valor que deseja transferir: ");
-   double transferencia = double.Parse(Console.ReadLine());
-   valor -= transferencia;
-    Console.WriteLine("valor na conta " + valor);
-    break;
+        Console.WriteLine("Insira o valor que deseja transferir: ");
+        double transferencia = double.Parse(Console.ReadLine());
+        valor -= transferencia;
+        Console.WriteLine("valor na conta " + valor);
+        Extrato += $"-{transferencia}\n";
+        goto return2;
+
     case "5":
-     Console.WriteLine("valor na conta " + valor);
-    break;
+        Console.WriteLine("valor na conta " + valor);
+        goto return2;
+    case "6":
+        Console.WriteLine("Operação Finalizada com Sucesso! ");
+        break;
 
 }
 
