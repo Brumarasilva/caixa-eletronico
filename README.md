@@ -1,11 +1,11 @@
-${\color{#ffc1d5}{Caixa\space Eletrônico}}$
+## ${\color{#ffc1d5}{Caixa\space Eletrônico}}$
 
 ## $${\color{#ffc1d5}O\space que\space foi\space utilizado?}$$
 
-*Linguagem C#
-*VS Code
-*Console (terminal)
-*ChatGPT (auxílio na explicação)
+* Linguagem C#
+* VS Code
+* Console (terminal)
+* ChatGPT (auxílio na explicação)
 
 ## $${\color{#ffc1d5}Etapas\space Implementadas:}$$
 
